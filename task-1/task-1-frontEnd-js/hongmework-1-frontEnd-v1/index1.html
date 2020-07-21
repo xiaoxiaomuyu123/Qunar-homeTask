@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>调试版本</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, 
+    initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css1/index1.css">
+    <link rel="stylesheet" href="download/font_1949501_5pm3j8tt6rb/iconfont.css">
+</head>
+<body>
+<!--
+调试版本 v1 完成，仅仅实现了前端页面，没有实现前后端交互
+页面中还存在一些 bug
+
+1、在向下滑动的过程中，当航班数大于 设置的高度，就又不能触发 scroll 事件。
+  如果将 height 值调大，就会导致向下滚动的过程中，航班信息显示完成以后，后面会跟着一段空白
+
+-->
+    <header>
+        <span class="iconfont icon-fanhui"></span>
+        <span>北京 <span class="iconfont icon-danxiangjiantou"></span> 上海</span>
+        <span class="iconfont icon-sousuo"></span>
+    </header>
+    <div id="box-header"></div>
+    <div id="box-nav"></div>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">
+                    <span>02-05</span>
+                    <span>今天</span>
+                    <span>￥363</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>02-06</span>
+                    <span>周二</span>
+                    <span>￥437</span>
+                </a>
+            </li>
+            <li>
+            <a href="#">
+                <span>02-07</span>
+                <span>周三</span>
+                <span>￥433</span>
+            </a>
+        </li>
+            <li>
+                <a href="#">
+                    <span>02-08</span>
+                    <span>周四</span>
+                    <span>￥483</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>02-09</span>
+                    <span>周五</span>
+                    <span>￥483</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="iconfont icon-riqi time"></span>
+                    <span>更多日期</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <ul class="plane">
+            <!-- 增加空白 li 元素使得在页面滑动停止在顶部的时候不会遮住第一个元素           -->
+            <li></li>
+            <li>
+                <a href="#">
+                    <div class="up">
+                        <div>
+                            <span>06:35</span>
+                            <span>首都T3</span>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                            <span class="iconfont icon-danxiangjiantou"></span>
+                        </div>
+                        <div>
+                            <span>08:50</span>
+                            <span>虹桥T2</span>
+                        </div>
+                        <div>
+                            <span class="price">￥001</span>
+                            <span>经济舱3.9折</span>
+                            <span class="attention">持续涨价中</span>
+                        </div>
+                    </div>
+                    <div class="down">吉祥航HO1252&nbsp;&nbsp;空客321（中）</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="up">
+                        <div>
+                            <span>06:35</span>
+                            <span>首都T3</span>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                            <span class="iconfont icon-danxiangjiantou"></span>
+                        </div>
+                        <div>
+                            <span>08:50</span>
+                            <span>虹桥T2</span>
+                        </div>
+                        <div>
+                            <span class="price">￥002</span>
+                            <span>经济舱3.9折</span>
+                            <span class="attention">持续涨价中</span>
+                        </div>
+                    </div>
+                    <div class="down">吉祥航HO1252&nbsp;&nbsp;空客321（中）</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="up">
+                        <div>
+                            <span>06:35</span>
+                            <span>首都T3</span>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                            <span class="iconfont icon-danxiangjiantou"></span>
+                        </div>
+                        <div>
+                            <span>08:50</span>
+                            <span>虹桥T2</span>
+                        </div>
+                        <div>
+                            <span class="price">￥003</span>
+                            <span>经济舱3.9折</span>
+                            <span class="attention">持续涨价中</span>
+                        </div>
+                    </div>
+                    <div class="down">吉祥航HO1252&nbsp;&nbsp;空客321（中）</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="up">
+                        <div>
+                            <span>06:35</span>
+                            <span>首都T3</span>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                            <span class="iconfont icon-danxiangjiantou"></span>
+                        </div>
+                        <div>
+                            <span>08:50</span>
+                            <span>虹桥T2</span>
+                        </div>
+                        <div>
+                            <span class="price">￥004</span>
+                            <span>经济舱3.9折</span>
+                            <span class="attention">持续涨价中</span>
+                        </div>
+                    </div>
+                    <div class="down">吉祥航HO1252&nbsp;&nbsp;空客321（中）</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="up">
+                        <div>
+                            <span>06:35</span>
+                            <span>首都T3</span>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                            <span class="iconfont icon-danxiangjiantou"></span>
+                        </div>
+                        <div>
+                            <span>08:50</span>
+                            <span>虹桥T2</span>
+                        </div>
+                        <div>
+                            <span class="price">￥005</span>
+                            <span>经济舱3.9折</span>
+                            <span class="attention">持续涨价中</span>
+                        </div>
+                    </div>
+                    <div class="down">吉祥航HO1252&nbsp;&nbsp;空客321（中）</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="up">
+                        <div>
+                            <span>06:35</span>
+                            <span>首都T3</span>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                            <span class="iconfont icon-danxiangjiantou"></span>
+                        </div>
+                        <div>
+                            <span>08:50</span>
+                            <span>虹桥T2</span>
+                        </div>
+                        <div>
+                            <span class="price">￥006</span>
+                            <span>经济舱3.9折</span>
+                            <span class="attention">持续涨价中</span>
+                        </div>
+                    </div>
+                    <div class="down">吉祥航HO1252&nbsp;&nbsp;空客321（中）</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="up">
+                        <div>
+                            <span>06:35</span>
+                            <span>首都T3</span>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                            <span class="iconfont icon-danxiangjiantou"></span>
+                        </div>
+                        <div>
+                            <span>08:50</span>
+                            <span>虹桥T2</span>
+                        </div>
+                        <div>
+                            <span class="price">￥007</span>
+                            <span>经济舱3.9折</span>
+                            <span class="attention">持续涨价中</span>
+                        </div>
+                    </div>
+                    <div class="down">吉祥航HO1252&nbsp;&nbsp;空客321（中）</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="up">
+                        <div>
+                            <span>06:35</span>
+                            <span>首都T3</span>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                            <span class="iconfont icon-danxiangjiantou"></span>
+                        </div>
+                        <div>
+                            <span>08:50</span>
+                            <span>虹桥T2</span>
+                        </div>
+                        <div>
+                            <span class="price">￥800</span>
+                            <span>经济舱3.9折</span>
+                            <span class="attention">持续涨价中</span>
+                        </div>
+                    </div>
+                    <div class="down">吉祥航HO1252&nbsp;&nbsp;空客321（中）</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="up">
+                        <div>
+                            <span>06:35</span>
+                            <span>首都T3</span>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                            <span class="iconfont icon-danxiangjiantou"></span>
+                        </div>
+                        <div>
+                            <span>08:50</span>
+                            <span>虹桥T2</span>
+                        </div>
+                        <div>
+                            <span class="price">￥900</span>
+                            <span>经济舱3.9折</span>
+                            <span class="attention">持续涨价中</span>
+                        </div>
+                    </div>
+                    <div class="down">吉祥航HO1252&nbsp;&nbsp;空客321（中）</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="up">
+                        <div>
+                            <span>06:35</span>
+                            <span>首都T3</span>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                            <span class="iconfont icon-danxiangjiantou"></span>
+                        </div>
+                        <div>
+                            <span>08:50</span>
+                            <span>虹桥T2</span>
+                        </div>
+                        <div>
+                            <span class="price">￥120</span>
+                            <span>经济舱3.9折</span>
+                            <span class="attention">持续涨价中</span>
+                        </div>
+                    </div>
+                    <div class="down">吉祥航HO1252&nbsp;&nbsp;空客321（中）</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="up">
+                        <div>
+                            <span>06:35</span>
+                            <span>首都T3</span>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                            <span class="iconfont icon-danxiangjiantou"></span>
+                        </div>
+                        <div>
+                            <span>08:50</span>
+                            <span>虹桥T2</span>
+                        </div>
+                        <div>
+                            <span class="price">￥220</span>
+                            <span>经济舱3.9折</span>
+                            <span class="attention">持续涨价中</span>
+                        </div>
+                    </div>
+                    <div class="down">吉祥航HO1252&nbsp;&nbsp;空客321（中）</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="up">
+                        <div>
+                            <span>06:35</span>
+                            <span>首都T3</span>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                            <span class="iconfont icon-danxiangjiantou"></span>
+                        </div>
+                        <div>
+                            <span>08:50</span>
+                            <span>虹桥T2</span>
+                        </div>
+                        <div>
+                            <span class="price">￥484</span>
+                            <span>经济舱3.9折</span>
+                            <span class="attention">持续涨价中</span>
+                        </div>
+                    </div>
+                    <div class="down">吉祥航HO1252&nbsp;&nbsp;空客321（中）</div>
+                </a>
+            </li>
+
+        </ul>
+    </section>
+    <footer>
+        <div>
+            <span class="iconfont icon-shaixuan"></span>
+            <span>筛选</span>
+        </div>
+        <div>
+            <span class="iconfont icon-tuijianpaixu"></span>
+            <span>推荐排序</span>
+        </div>
+        <div>
+            <span class="iconfont icon-shijian"></span>
+            <span>时间</span>
+        </div>
+        <div>
+            <span class="iconfont icon-jiage"></span>
+            <span>价格</span>
+        </div>
+    </footer>
+    <script>
+        // // 获取页面的高度
+        // let height = window.innerHeight;
+        // console.log(height);
+        // // 用 js 给 html 动态添加css
+        // function modifyCss (cssString) {
+        //     let style = document.createElement("style");
+        //     style.type="text/css";
+        //     style.appendChild(document.createTextNode(cssString));
+        //     let head = document.getElementsByTagName('head')[0];
+        //     head.appendChild(style);
+        // }
+        //
+        // modifyCss("section{}")
+
+        let t1 = 0;
+        let t2 = 0;
+        var timer = null; // 定时器
+        let nav = document.querySelector('nav');
+        let footer = document.querySelector('footer');
+        let section = document.querySelector('section');
+        let plane = document.querySelector('.plane');
+        function handleScroll(event) {
+            console.log("进入 handleScroll")
+            clearTimeout(timer);
+
+            if(!nav.classList.contains('disappear')) {
+                nav.classList.add('disappear');
+                footer.classList.add('disappear')
+            }
+            t1 = document.documentElement.scrollTop || document.body.scrollTop;
+            console.log(t1) ;
+            timer = setTimeout(() => {
+                    isScrollEnd() ;
+            }, 10);
+        }
+        plane.addEventListener('scroll', handleScroll) ;
+        // document.onscroll =  handleScroll ;
+
+        function isScrollEnd() {
+            console.log('执行 isScrollEnd') ;
+            t2 = document.documentElement.scrollTop || document.body.scrollTop;
+            if(t2 === t1){
+                nav.classList.remove('disappear');
+                nav.classList.add('appear')
+                footer.classList.remove('disappear');
+                footer.classList.add('appear');
+            }
+           console.log(t1, t2) ;
+        }
+
+    </script>
+</body>
+</html>
